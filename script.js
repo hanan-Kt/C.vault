@@ -1,107 +1,70 @@
-/**
- * C.vault E-commerce Script
- *
- * This script handles the hero image carousel and the scroll-to-top button.
- */
-
 document.addEventListener('DOMContentLoaded', () => {
-    // --- 1. Hero Carousel Functionality ---
+    const carouselInner = document.querySelector('.carousel-inner');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.carousel-control.prev');
+    const nextButton = document.querySelector('.carousel-control.next');
+    const indicators = document.querySelectorAll('.carousel-indicators .indicator');
 
-    const carouselItems = document.querySelectorAll('.hero-carousel .carousel-item');
-    const prevButton = document.querySelector('.hero-carousel .prev');
-    const nextButton = document.querySelector('.hero-carousel .next');
-    const indicators = document.querySelectorAll('.hero-carousel .indicator');
     let currentIndex = 0;
-    // Set the interval between 4000ms (4 seconds) and 7000ms (7 seconds).
-    // I'll choose 6000ms (6 seconds) as a good middle ground.
-    const autoScrollInterval = 6000;
-    let slideInterval;
+    const totalItems = carouselItems.length;
+    let carouselInterval;
 
-    /**
-     * Updates the carousel display to show the specified index.
-     * @param {number} index - The index of the item to show.
-     */
-    function showSlide(index) {
-        // Remove 'active' class from all items and indicators
-        carouselItems.forEach(item => item.classList.remove('active'));
-        indicators.forEach(indicator => indicator.classList.remove('active'));
+    function updateCarousel() {
+        if (totalItems === 0) return;
 
-        // Handle wrapping around the array
-        if (index >= carouselItems.length) {
-            currentIndex = 0;
-        } else if (index < 0) {
-            currentIndex = carouselItems.length - 1;
-        } else {
-            currentIndex = index;
-        }
+        carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-        // Add 'active' class to the current item and indicator
-        carouselItems[currentIndex].classList.add('active');
-        indicators[currentIndex].classList.add('active');
+        indicators.forEach(ind => ind.classList.remove('active'));
+        if (indicators[currentIndex]) indicators[currentIndex].classList.add('active');
     }
 
-    /**
-     * Moves the carousel to the next slide.
-     */
     function nextSlide() {
-        showSlide(currentIndex + 1);
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateCarousel();
     }
 
-    /**
-     * Starts the automatic sliding interval.
-     */
-    function startAutoSlide() {
-        // Clear any existing interval before setting a new one
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, autoScrollInterval);
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        updateCarousel();
     }
 
-    // Initialize carousel on load
-    showSlide(currentIndex);
-    startAutoSlide(); // Start the auto-scroll
+    function resetAutoAdvance() {
+        clearInterval(carouselInterval);
+        if (totalItems > 1) {
+            carouselInterval = setInterval(nextSlide, 5000);
+        }
+    }
 
-    // Event Listeners for Manual Control
-    nextButton.addEventListener('click', () => {
-        nextSlide();
-        // Reset the auto-scroll timer after a manual click
-        startAutoSlide();
-    });
-
-    prevButton.addEventListener('click', () => {
-        showSlide(currentIndex - 1);
-        // Reset the auto-scroll timer after a manual click
-        startAutoSlide();
-    });
+    if (nextButton) nextButton.addEventListener('click', () => { nextSlide(); resetAutoAdvance(); });
+    if (prevButton) prevButton.addEventListener('click', () => { prevSlide(); resetAutoAdvance(); });
 
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('click', () => {
-            showSlide(index);
-            // Reset the auto-scroll timer after a manual click
-            startAutoSlide();
+            currentIndex = index;
+            updateCarousel();
+            resetAutoAdvance();
         });
     });
 
+    if (totalItems > 0) {
+        updateCarousel();
+        resetAutoAdvance();
+    }
 
-    // --- 2. Scroll-to-Top Button Functionality ---
-
-    const scrollToTopButton = document.querySelector('.scroll-to-top');
-
-    // Show button when scrolling down
-    window.addEventListener('scroll', () => {
-        // If the vertical scroll position is more than 300 pixels, show the button
-        if (window.scrollY > 300) {
-            scrollToTopButton.style.display = 'block';
-        } else {
-            scrollToTopButton.style.display = 'none';
-        }
-    });
-
-    // Scroll to top on click
-    scrollToTopButton.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // Smooth scrolling animation
+    const scrollToTopBtn = document.querySelector('.scroll-to-top');
+    if (scrollToTopBtn) {
+        window.addEventListener('scroll', () => {
+            scrollToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
         });
-    });
 
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    const heroCarousel = document.querySelector('.hero-carousel');
+    if (heroCarousel) {
+        heroCarousel.addEventListener('mouseenter', () => clearInterval(carouselInterval));
+        heroCarousel.addEventListener('mouseleave', () => resetAutoAdvance());
+    }
 });
