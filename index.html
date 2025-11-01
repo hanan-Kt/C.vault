@@ -6,459 +6,272 @@
     <title>C.vault - Your Destination for Style</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="top-bar">
-            <p>Shipping outside of the U.S.? <a href="#">Learn About International Shopping</a></p>
-            <div class="country-selector">
-                <i class="fas fa-flag"></i> Pakistan <i class="fas fa-chevron-down"></i>
+<header class="main-header">
+    <div class="top-bar">
+        <div class="country-selector">
+            <i class="fas fa-flag"></i> Select country <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+
+    <div class="header-main container"> 
+        <a href="#" class="logo">C.vault</a>
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search for products">
+        </div>
+        <div class="header-icons">
+            <a href="#" class="header-sign-in"><i class="fas fa-user"></i> Sign In <i class="fas fa-chevron-down"></i></a>
+            <a href="#"><i class="fas fa-shopping-bag"></i></a>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Beauty</a></li>
+            <li><a href="#">Shoes</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Designer</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero-carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <a href="#"><img src="images/young-woman-wearing-colorful-winter-clothes.jpg" alt="Winter Clothes"></a>
+                <a href="#" class="shop-btn">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="images/girl-face-a-little-above-and-redhead.jpg" alt="Beauty"></a>
+                <a href="#" class="shop-btn">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="images/fathers-day-composition-with-shoes.jpg" alt="Boots for All Ages"></a>
+                <a href="#" class="shop-btn">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="images/dreamy-woman-retro-black-dress-looking-up-while-posing-beside-hangers-with-clothes.jpg" alt="Dresses"></a>
+                <a href="#" class="shop-btn">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <a href="#"><img src="images/organized-cabinet-home with-hands.jpg" alt="Home Organizers"></a>
+                <a href="#" class="shop-btn">Shop</a>
             </div>
         </div>
+        <button class="carousel-control prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-control next"><i class="fas fa-chevron-right"></i></button>
+        <div class="carousel-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+    </section>
 
-        <div class="header-main">
-            <a href="#" class="logo">C.vault</a>
-            <div class="search-bar">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Search for products or brands">
+    <section class="ladies-block container">
+        <h2>Women's Block</h2>
+        <div class="category-row">
+            <div class="category-card">
+                <a href="#">
+                    <div class="image-container">
+                        <img src="images/smiley-young-woman-posing-side-view.jpg" alt="Glow">
+                    </div>
+                </a>
+                <p><a href="#">Glow</a></p>
             </div>
-            <div class="header-icons">
-                <a href="#"><i class="fas fa-user"></i> Sign In <i class="fas fa-chevron-down"></i></a>
-                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+            <div class="category-card">
+                <a href="#">
+                    <div class="image-container">
+                        <img src="images/portrait-woman-winter-clothing.jpg" alt="Sweaters">
+                    </div>
+                </a>
+                <p><a href="#">Sweaters</a></p>
+            </div>
+            <div class="category-card">
+                <a href="#">
+                    <div class="image-container">
+                        <img src="images/boots-for-adventure-togather.jpg" alt="Boots">
+                    </div>
+                </a>
+                <p><a href="#">Boots</a></p>
+            </div>
+            <div class="category-card">
+                <a href="#">
+                    <div class="image-container">
+                        <img src="images/female-hands-close-up-holding-bag-flowers.jpg" alt="Handbags">
+                    </div>
+                </a>
+                <p><a href="#">Handbags</a></p>
+            </div>
+            <div class="category-card">
+                <a href="#">
+                    <div class="image-container">
+                        <img src="images/quality-female-lingerie-still-life.jpg" alt="Under garments">
+                    </div>
+                </a>
+                <p><a href="#">Under garments</a></p>
             </div>
         </div>
+    </section>
 
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#"><i class="fas fa-gift"></i> Holiday Gifts</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Sale</a></li>
-                <li><a href="#">Women</a></li>
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Beauty</a></li>
-                <li><a href="#">Shoes</a></li>
-                <li><a href="#">Accessories</a></li>
-                <li><a href="#">Kids</a></li>
-                <li><a href="#">Designer</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Explore</a></li>
+    <section class="shop-by-category container">
+        <div class="content">
+            <h1>Shop by Category</h1>
+            <div class="gift-categories">
+                <button class="category-btn-styled">Elevated Care</button>
+                <button class="category-btn-styled">Carry Along</button>
+                <button class="category-btn-styled">Dress Up</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="men-block container">
+        <h2>Men's Block</h2>
+        <div class="category-row">
+            <div class="category-card">
+                <a href="#">
+                    <div class="image-container">
+                        <img src="images/man-grey-coat-stands-with-cup-coffee-outside.jpg" alt="Winter Arrival">
+                    </div>
+                </a>
+                <p><a href="#">Winter Arrival</a></p>
+            </div>
+            <div class="category-card">
+                <a href="#">
+                    <div class="image-container">
+                        <img src="images/pair-brown-leather-boots.jpg" alt="Boots">
+                    </div>
+                </a>
+                <p><a href="#">Boots</a></p>
+            </div>
+            <div class="category-card">
+                <a href="#">
+                    <div class="image-container">
+                        <img src="images/athlete-doing-balance-exercise.jpg" alt="Sports wear">
+                    </div>
+                </a>
+                <p><a href="#">Sports wear</a></p>
+            </div>
+            <div class="category-card">
+                <a href="#">
+                    <div class="image-container">
+                        <img src="images/men-s-white-tank-top-pink-shorts.jpg" alt="Under garments">
+                    </div>
+                </a>
+                <p><a href="#">Under Garments</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="kids-block container">
+        <h2>Kids Block</h2>
+        <div class="category-row">
+            <div class="category-card">
+                <a href="#">
+                    <div class="image-container">
+                        <img src="images/full-shot-kids-posing-together.jpg" alt="Everyday wear">
+                    </div>
+                </a>
+                <p><a href="#">Everyday wear</a></p>
+            </div>
+            <div class="category-card">
+                <a href="#">
+                    <div class="image-container">
+                        <img src="images/medium-shot-smiley-kid-posing.jpg" alt="Sweaters">
+                    </div>
+                </a>
+                <p><a href="#">Sweaters</a></p>
+            </div>
+            <div class="category-card">
+                <a href="#">
+                    <div class="image-container">
+                        <img src="images/dark-blue-shoes-with-blurred-red-shoes-background.jpg" alt="Boots">
+                    </div>
+                </a>
+                <p><a href="#">Boots</a></p>
+            </div>
+            <div class="category-card">
+                <a href="#">
+                    <div class="image-container">
+                        <img src="images/portrait-young-girl-with-basketball.jpg" alt="Sports wear">
+                    </div>
+                </a>
+                <p><a href="#">Sports wear</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="explore-more container">
+        <div class="section-header">
+            <h2 class="explore-more-title">Explore More</h2>
+            <h3 class="explore-more-subtitle">Want something to organize?</h3>
+        </div>
+        <div class="explore-grid"> 
+            <div class="promo-card wide-card"> 
+                <a href="#">
+                    <div class="image-container">
+                        <img src="images/organized-cabinet-home.jpg" alt="Want something to organize?">
+                    </div>
+                </a>
+            </div>
+            <div class="promo-card">
+                <a href="#">
+                    <div class="image-container">
+                        <img src="images/front-view-couple-posing-while-holding-hands.jpg" alt="Everyday Essentials">
+                    </div>
+                </a>
+                <div class="promo-content"><h3>Everyday Essentials</h3></div>
+            </div>
+            <div class="promo-card">
+                <a href="#">
+                    <div class="image-container">
+                        <img src="images/keys-beauty-supplies-near-makeup-bag.jpg" alt="Under $30">
+                    </div>
+                </a>
+                <div class="promo-content"><h3>Under $30</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="email-signup">
+        <div class="container">
+            <input type="email" placeholder="Email address">
+            <button>Sign up</button>
+        </div>
+    </section>
+
+</main>
+
+<footer class="main-footer">
+    <div class="footer-columns container">
+        <div class="footer-col customer-service-footer">
+            <ul class="customer-service-list">
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Order Status</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Return Policy & Exchanges</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">About Us</a></li>
             </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero-carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <a href="#"><img src="images/A1.jpg" alt="All the Gifts!"></a>
-                </div>
-                <div class="carousel-item">
-                    <a href="#"><img src="images/A2.jpg" alt="Gifts They'll Love"></a>
-                </div>
-                </div>
-            <button class="carousel-control prev"><i class="fas fa-chevron-left"></i></button>
-            <button class="carousel-control next"><i class="fas fa-chevron-right"></i></button>
-            <div class="carousel-indicators">
-                <span class="indicator active"></span>
-                <span class="indicator"></span>
-                </div>
-        </section>
-
-        <section class="gifts-theyll-love container">
-            <div class="content">
-                <h1>Gifts They'll Love</h1>
-                <div class="gift-categories">
-                    <a href="#" class="category-btn">Gifts for Her</a>
-                    <a href="#" class="category-btn">Gifts for Him</a>
-                    <a href="#" class="category-btn">Gifts for Kids & Babies</a>
-                    <a href="#" class="category-btn">Our Favorite Holiday Gifts</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="gifts-for-every-budget container">
-            <div class="section-header">
-                <h2>Gifts for Every Budget</h2>
-                <a href="#" class="view-all">View All</a>
-            </div>
-            <div class="budget-nav">
-                <a href="#" class="budget-link active">Gifts Under $100 for Anyone</a>
-                <a href="#" class="budget-link">Gifts Under $50 for Anyone</a>
-                <a href="#" class="budget-link">Gifts Under $25 for Anyone</a>
-                <a href="#" class="budget-link">Luxe Gifts for Anyone</a>
-                <a href="#" class="budget-link">Gifts on Sale for Anyone</a>
-            </div>
-            <div class="product-grid">
-                <div class="product-card">
-                    <a href="#"><img src="images/A3.jpg" alt="NODPOD"></a>
-                    <div class="product-info">
-                        <span class="popular-tag">Popular</span>
-                        <a href="#" class="color-options">
-                            <span class="color-swatch grey"></span>
-                            <span class="color-swatch purple"></span>
-                            <span class="color-swatch green"></span>
-                            <span class="color-swatch blue"></span>
-                            <span class="color-swatch plus"><i class="fas fa-plus"></i></span>
-                        </a>
-                        <h3><a href="#">NODPOD</a></h3>
-                        <p class="price"><a href="#">$38</a></p>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (268)
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <a href="#"><img src="images/A4.jpg" alt="Polaroid Originals"></a>
-                    <div class="product-info">
-                        <span class="popular-tag">Popular</span>
-                        <a href="#" class="color-options">
-                            <span class="color-swatch purple"></span>
-                            <span class="color-swatch blue"></span>
-                        </a>
-                        <h3><a href="#">Polaroid Originals</a></h3>
-                        <p class="price"><a href="#">$89.99</a></p>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> (84)
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <a href="#"><img src="images/A5.jpg" alt="UGG®"></a>
-                    <div class="product-info">
-                        <span class="popular-tag">Popular</span>
-                        <a href="#" class="color-options">
-                            <span class="color-swatch grey"></span>
-                            <span class="color-swatch brown"></span>
-                            <span class="color-swatch terracotta"></span>
-                        </a>
-                        <h3><a href="#">UGG®</a></h3>
-                        <p class="price"><a href="#">$84.95</a></p>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (617)
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <a href="#"><img src="images/A6.jpg" alt="Jellycat"></a>
-                    <div class="product-info">
-                        <span class="popular-tag">Popular</span>
-                        <h3><a href="#">Jellycat</a></h3>
-                        <p class="price"><a href="#">$33</a></p>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (4)
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <a href="#"><img src="images/A7.jpg" alt="Hydro Flask"></a>
-                    <div class="product-info">
-                        <span class="popular-tag">Popular</span>
-                        <a href="#" class="color-options">
-                            <span class="color-swatch blue"></span>
-                            <span class="color-swatch beige"></span>
-                        </a>
-                        <h3><a href="#">Hydro Flask</a></h3>
-                        <p class="price"><a href="#">$19.95</a></p>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (318)
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <a href="#"><img src="images/A8.jpg" alt="Uncommon G"></a>
-                    <div class="product-info">
-                        <span class="popular-tag new-tag">New!</span>
-                        <h3><a href="#">Uncommon G</a></h3>
-                        <p class="price"><a href="#">$70</a></p>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (50)
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="making-spirits-bright container">
-            <div class="section-header">
-                <h2>Making Spirits Bright</h2>
-                <div class="carousel-controls">
-                    <button class="carousel-btn prev-promo"><i class="fas fa-chevron-left"></i></button>
-                    <button class="carousel-btn next-promo"><i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
-            <div class="promo-grid">
-                <div class="promo-card">
-                    <a href="#"><img src="images/A9.jpg" alt="Making Spirits Bright 1"></a>
-                </div>
-                <div class="promo-card">
-                    <a href="#"><img src="images/A10.jpg" alt="Making Spirits Bright 2"></a>
-                </div>
-                <div class="promo-card">
-                    <a href="#"><img src="images/A11.jpg" alt="Making Spirits Bright 3"></a>
-                </div>
-            </div>
-        </section>
-
-        <section class="gifts-for-all-section container">
-            <div class="promo-wide-grid">
-                <div class="wide-promo-card">
-                    <a href="#"><img src="images/A12.jpg" alt="Wow Them with Our Best Gifts"></a>
-                    <div class="promo-content">
-                        <h3>Wow Them with Our Best Gifts</h3>
-                        <p>From under-$100 treasures to grand gestures from top brands—find the perfect presents for everyone you love, all in one place.</p>
-                    </div>
-                </div>
-                <div class="wide-promo-card">
-                    <a href="#"><img src="images/A13.jpg" alt="Festive Events & Experiences"></a>
-                    <div class="promo-content">
-                        <h3>Festive Events & Experiences</h3>
-                        <p>The holidays are here! Make time to make merry with fun and family-friendly events in our stores.</p>
-                    </div>
-                </div>
-                <div class="wide-promo-card">
-                    <a href="#"><img src="images/A14.jpg" alt="Holiday Gift Help"></a>
-                    <div class="promo-content">
-                        <h3>Holiday Gift Help</h3>
-                        <p>Not sure what to give? Get personalized recommendations from our gift experts in stores or online.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="winter-essentials container">
-            <div class="winter-promo-row">
-                <div class="winter-promo-image">
-                    <a href="#"><img src="images/A15.jpg" alt="Your New Winter Essentials"></a>
-                </div>
-                <div class="winter-promo-text">
-                    <h2>Your New Winter Essentials</h2>
-                    <p>Discover the latest coats, knits, boots and accessories for brisk days and colder nights.</p>
-                    <div class="button-group">
-                        <a href="#" class="button-primary">Women's Cold Weather</a>
-                        <a href="#" class="button-secondary">Men's Cold Weather</a>
-                    </div>
-                </div>
-                <div class="winter-promo-image">
-                    <a href="#"><img src="images/A16.jpg" alt="Winter Essential Product"></a>
-                </div>
-            </div>
-        </section>
-
-        <section class="maximal-glam container">
-            <div class="section-header">
-                <h2>Maximal Glam</h2>
-            </div>
-            <div class="promo-grid">
-                <div class="promo-card">
-                    <a href="#"><img src="images/A17.jpg" alt="Maximal Glam 1"></a>
-                    <div class="promo-content">
-                        <h3>Maximal Glam</h3>
-                    </div>
-                </div>
-                <div class="promo-card">
-                    <a href="#"><img src="images/A18.jpg" alt="Mejuri, Now at C.vault"></a>
-                    <div class="promo-content">
-                        <h3>Mejuri, Now at C.vault</h3>
-                    </div>
-                </div>
-                <div class="promo-card">
-                    <a href="#"><img src="images/A19.jpg" alt="The Softest Statement"></a>
-                    <div class="promo-content">
-                        <h3>The Softest Statement</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="brands-we-love container">
-            <div class="section-header">
-                <h2>Brands We Love</h2>
-                <div class="carousel-controls">
-                    <button class="carousel-btn prev-brands"><i class="fas fa-chevron-left"></i></button>
-                    <button class="carousel-btn next-brands"><i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
-            <div class="promo-grid">
-                <div class="promo-card">
-                    <a href="#"><img src="images/A20.jpg" alt="Birkenstock"></a>
-                    <div class="promo-content">
-                        <h3>Birkenstock</h3>
-                    </div>
-                </div>
-                <div class="promo-card">
-                    <a href="#"><img src="images/A21.jpg" alt="DIOR"></a>
-                    <div class="promo-content">
-                        <h3>DIOR</h3>
-                    </div>
-                </div>
-                <div class="promo-card">
-                    <a href="#"><img src="images/A22.jpg" alt="Cole Haan"></a>
-                    <div class="promo-content">
-                        <h3>Cole Haan</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="explore-more container">
-            <div class="section-header">
-                <h2>Explore More</h2>
-            </div>
-            <div class="promo-grid">
-                <div class="promo-card">
-                    <a href="#"><img src="images/A23.jpg" alt="The Nordy Club"></a>
-                    <div class="promo-content">
-                        <h3>Get $40 Off Your Next Purchase</h3>
-                    </div>
-                </div>
-                <div class="promo-card">
-                    <a href="#"><img src="images/A24.jpg" alt="Join & Earn 3X Points on Beauty!"></a>
-                    <div class="promo-content">
-                        <h3>Join & Earn 3X Points on Beauty!</h3>
-                    </div>
-                </div>
-                <div class="promo-card">
-                    <a href="#"><img src="images/A25.jpg" alt="A Perfect Fit for Every Body"></a>
-                    <div class="promo-content">
-                        <h3>Empowering Support, Tailored to You</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="extra-product-showcase container">
-            <div class="product-grid compact-grid">
-                <div class="product-card">
-                    <h3><a href="#">adidas</a></h3>
-                    <p class="price"><a href="#">$110</a></p>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (1027)
-                    </div>
-                </div>
-                <div class="product-card">
-                    <h3><a href="#">UGG®</a></h3>
-                    <p class="price"><a href="#">$124.95</a></p>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> (10)
-                    </div>
-                </div>
-                <div class="product-card">
-                    <h3><a href="#">UGG®</a></h3>
-                    <p class="price"><a href="#">$159.95</a></p>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (1617)
-                    </div>
-                </div>
-                <div class="product-card">
-                    <h3><a href="#">UGG®</a></h3>
-                    <p class="price"><a href="#">$125</a></p>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> (4)
-                    </div>
-                </div>
-                <div class="product-card">
-                    <h3><a href="#">Birkenstock</a></h3>
-                    <p class="price"><a href="#">$169.95</a></p>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (990)
-                    </div>
-                </div>
-                <div class="product-card">
-                    <h3><a href="#">UGG®</a></h3>
-                    <p class="price"><a href="#">$144.95</a></p>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> (10)
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="email-signup">
-            <div class="container">
-                <h3>Get Email Updates:</h3>
-                <input type="email" placeholder="Email address">
-                <button>Sign up</button>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="main-footer">
-        <div class="footer-columns container">
-            <div class="footer-col">
-                <h4>Customer Service</h4>
-                <ul>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Order Status</a></li>
-                    <li><a href="#">Shipping</a></li>
-                    <li><a href="#">Return Policy & Exchanges</a></li>
-                    <li><a href="#">Price Adjustments</a></li>
-                    <li><a href="#">Gift Cards</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Product Recalls</a></li>
-                </ul>
-                <div class="country-selector">
-                    <i class="fas fa-flag"></i> Pakistan <i class="fas fa-chevron-down"></i>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>About Us</h4>
-                <ul>
-                    <li><a href="#">All Brands</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Our Impact</a></li>
-                    <li><a href="#">People & Culture</a></li>
-                    <li><a href="#">Get Email Updates</a></li>
-                    <li><a href="#">Nordy Podcast</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Stores & Services</h4>
-                <ul>
-                    <li><a href="#">Find a Store</a></li>
-                    <li><a href="#">Free Style Help</a></li>
-                    <li><a href="#">Alterations & Tailoring</a></li>
-                    <li><a href="#">SkinSpirit Clinic & Spa at C.vault</a></li>
-                    <li><a href="#">C.vault Restaurants</a></li>
-                    <li><a href="#">C.vault Local</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>C.vault Card & Rewards</h4>
-                <ul>
-                    <li><a href="#">The Nordy Club Rewards</a></li>
-                    <li><a href="#">Apply for a C.vault Card</a></li>
-                    <li><a href="#">Pay My Bill</a></li>
-                    <li><a href="#">Manage My C.vault Card</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>C.vault, Inc.</h4>
-                <ul>
-                    <li><a href="#">Investor Relations</a></li>
-                    <li><a href="#">Press Releases</a></li>
-                    <li><a href="#">C.vault Media Network</a></li>
-                </ul>
-            </div>
-            <div class="footer-col social-download">
-                <div class="download-app">
-                    <a href="#"><i class="fas fa-download"></i> Download Our App</a>
-                </div>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <button class="scroll-to-top"><i class="fas fa-chevron-up"></i> Top</button>
-    <button class="chat-button"><i class="fas fa-comment-dots"></i></button>
+<button class="scroll-to-top"><i class="fas fa-chevron-up"></i> Top</button>
+<button class="chat-button"><i class="fas fa-comment-dots"></i></button>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
