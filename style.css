@@ -306,6 +306,10 @@ h1, h2, h3, h4 {
     color: var(--primary-color) !important;
 }
 
+.main-nav a:hover {
+    color: var(--link-color);
+}
+
 .hero-carousel {
     width: 100%;
     max-width: 100vw; 
@@ -664,13 +668,16 @@ h1, h2, h3, h4 {
     transition: background-color 0.2s;
 }
 
+/* --- FIXED POSITIONING FOR DESKTOP --- */
+/* Scroll-to-Top: Closest to the edge */
 .scroll-to-top {
-    right: 20px;
-    display: none; 
+    right: 20px; 
+    display: none; /* Initially hidden, JS shows it on scroll */
 }
 
+/* Chat Button: Positioned further left to clear the Scroll-to-Top button */
 .chat-button {
-    right: 120px; 
+    right: 100px; /* NEW: Increased from 90px to 100px for a definite gap */
 }
 
 .scroll-to-top:hover, .chat-button:hover {
@@ -974,7 +981,7 @@ h1, h2, h3, h4 {
 .chat-window {
     position: fixed;
     bottom: 90px;
-    right: 20px;
+    right: 100px; /* NEW DESKTOP: Aligns with the new chat-button position */
     width: 350px;
     height: 450px;
     background-color: var(--chat-bg);
@@ -1222,11 +1229,13 @@ h1, h2, h3, h4 {
         max-width: 350px;
     }
     
+    /* --- FIXED POSITIONING FOR MOBILE (Side Site) --- */
     .scroll-to-top {
-        right: 10px;
+        display: none !important; /* REQUIREMENT: Permanently hide on mobile */
     }
     
     .chat-button {
+        /* Move the chat button to the far right since the scroll button is gone */
         right: 10px; 
         bottom: 10px;
         padding: 12px 18px;
@@ -1235,6 +1244,318 @@ h1, h2, h3, h4 {
         height: 50px;
         box-sizing: content-box;
     }
+    
+    .chat-button i {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .chat-window {
+        /* Match the chat button's new position */
+        bottom: 70px; /* Above the button */
+        right: 10px; 
+        width: 90%;
+        height: 80vh;
+    }
+}
+
+
+/* ========================================================================= */
+/* --- Winter Arrivals (PLP) STYLES --- */
+/* ========================================================================= */
+
+.new-in-main {
+    padding: 20px 0 60px 0;
+}
+
+.new-in-title {
+    font-size: 38px;
+    font-family: var(--font-header);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}  
+
+/* --- Filter & Controls Section --- */
+
+.new-in-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+    margin-bottom: 40px;
+}
+
+.filter-group-desktop {
+    display: flex;
+    gap: 30px;
+}
+
+.filter-dropdown {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.dropdown-label {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+
+.dropdown-label i {
+    font-size: 10px;
+    transition: transform 0.2s;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    z-index: 50;
+    padding: 10px 0;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+.dropdown-content a:hover {
+    background-color: var(--background-light);
+    color: var(--primary-color);
+}
+
+/* Hiding the dropdown content by default (JS will manage the 'hidden' class) */
+.dropdown-content.hidden {
+    display: none;
+}
+
+.filter-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-count {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+/* --- Product Grid Layout --- */
+
+.new-in-product-grid {
+    display: grid;
+    /* 4 columns with equal distance (gap) */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 25px; 
+}
+
+.product-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.product-image-wrapper {
+    overflow: hidden;
+    position: relative;
+    /* This maintains the aspect ratio, making images equal in size */
+    padding-top: 125%; /* 4:5 aspect ratio is common for fashion images */
+    margin-bottom: 10px;
+}
+
+.product-image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+.product-item a:hover .product-image-wrapper img {
+    transform: scale(1.02);
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+}
+
+.product-name {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--primary-color);
+    line-height: 1.3;
+    margin-bottom: 3px;
+    text-transform: capitalize;
+}
+
+.product-price {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.add-to-wishlist {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.add-to-wishlist i {
+    font-size: 16px;
+    color: var(--secondary-color);
+}
+
+.add-to-wishlist:hover {
+    background-color: var(--sale-color);
+    border-color: var(--sale-color);
+}
+
+.add-to-wishlist:hover i {
+    color: #fff;
+}
+
+
+/* --- Pagination --- */
+.new-in-pagination {
+    grid-column: 1 / -1; /* Span across all 4 columns */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.new-in-pagination .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    font-size: 14px;
+    color: var(--primary-color);
+    transition: background-color 0.2s;
+}
+
+.new-in-pagination .page-link:hover:not(.active):not(.disabled) {
+    background-color: var(--background-light);
+}
+
+.new-in-pagination .page-link.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+    font-weight: 500;
+}
+
+.new-in-pagination .page-link.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* --- Responsive Adjustments (for smaller screens) --- */
+@media (max-width: 992px) {
+    .new-in-title {
+        font-size: 32px;
+    }
+    
+    .new-in-product-grid {
+        /* Change to 3 columns on medium screens */
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    .filter-group-desktop {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .new-in-title {
+        font-size: 28px;
+    }
+    
+    .new-in-product-grid {
+        /* Change to 2 columns on small screens */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    
+    .new-in-filters {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .filter-group-desktop {
+        /* Hide complex filters on mobile to simplify view */
+        display: none; 
+    }
+    
+    .filter-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .product-count {
+        order: 2; /* Put count last */
+    }
+
+    .sort-dropdown {
+        order: 1; /* Put sort first */
+    }
+    
+    /* --- MOBILE STYLES (Side Site) --- */
+    
+    /* Requirement 1: Remove scroll-to-top button */
+    .scroll-to-top {
+        display: none !important; 
+    }
+
+    /* Requirement 2 & 3: Move chat button to the far right edge */
+    .chat-button {
+        right: 10px; /* Aligned to the far right edge */
+        bottom: 10px;
+        padding: 12px 18px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        box-sizing: content-box;
+    }
+    
     .chat-button i {
         margin: 0;
         font-size: 20px;
@@ -1242,13 +1563,8 @@ h1, h2, h3, h4 {
 
     .chat-window {
         bottom: 70px;
-        right: 10px;
+        right: 10px; /* Matches the chat-button's new right position */
         width: 90%;
         height: 80vh;
-    }
-    
-    .sidebar-content {
-        width: 100%; 
-        max-width: 100%;
     }
 }
