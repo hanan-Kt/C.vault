@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everyday Wear - C.vault</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+    <div class="top-bar">
+        <div class="country-selector-container">
+            <div class="country-selector" id="countrySelectButton">
+                <span id="selectedCountryDisplay">Select country</span>
+                <i class="fas fa-chevron-down" id="dropdownIcon"></i>
+            </div>
+            
+            <div id="countryDropdown" class="country-dropdown-menu hidden">
+                <div class="search-bar-container">
+                    <input type="text" id="countrySearchInput" placeholder="Search for a country..." class="search-input">
+                </div>
+                
+                <div id="countryList" class="country-list">
+                    </div>
+            </div>
+        </div>
+        </div>
+
+    <div class="header-main container"> 
+        <a href="index.html" class="logo">C.vault</a>
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search for products">
+        </div>
+        <div class="header-icons">
+            
+            <div class="sign-in-dropdown-container">
+                <a href="#" class="header-sign-in" id="signInButton">
+                    <i class="fas fa-user"></i> Sign In <i class="fas fa-chevron-down" id="signInDropdownIcon"></i>
+                </a>
+
+                <div id="signInDropdown" class="sign-in-menu hidden">
+                    <button class="sign-in-option register-btn" data-action="register">Register</button>
+                    <button class="sign-in-option login-btn" data-action="login">Login</button>
+                </div>
+            </div>
+            <a href="#" id="cartButton"><i class="fas fa-shopping-bag"></i></a>
+        </div>
+    </div>
+</header>
+
+<nav class="main-nav">
+    <ul>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Beauty</a></li>
+        <li><a href="#">Shoes</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">Kids</a></li>
+        <li><a href="#">Designer</a></li>
+    </ul>
+</nav>
+    <main class="new-in-main">
+    <div class="container">
+        <h1 class="new-in-title">Everyday Wear</h1>
+
+        <section class="new-in-filters">
+            <div class="filter-group-desktop">
+                <div class="filter-dropdown">
+                    <span class="dropdown-label">CATEGORY <i class="fas fa-chevron-down"></i></span>
+                    <div class="dropdown-content hidden">
+                        <a href="#">Coats</a>
+                        <a href="#">Jackets</a>
+                        <a href="#">Sweaters</a>
+                        <a href="#">Boots</a>
+                        <a href="#">Caps</a>
+                    </div>
+                </div>
+                <div class="filter-dropdown">
+                    <span class="dropdown-label">SIZE <i class="fas fa-chevron-down"></i></span>
+                    <div class="dropdown-content hidden">
+                        <a href="#">XS</a>
+                        <a href="#">S</a>
+                        <a href="#">M</a>
+                        <a href="#">L</a>
+                        <a href="#">XL</a>
+                    </div>
+                </div>
+                
+                <div class="filter-dropdown">
+                    <span class="dropdown-label">PRICE <i class="fas fa-chevron-down"></i></span>
+                    <div class="dropdown-content hidden">
+                        <a href="#">More than 40$</a>
+                        <a href="#">Less than 40$</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-dropdown">
+                    <span class="dropdown-label">SORT BY<i class="fas fa-chevron-down"></i></span>
+                    <div class="dropdown-content hidden">
+                        <a href="#">High to Low Price</a>
+                        <a href="#">Low to High Price</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="new-in-product-grid">
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/Gihuo Women’s Winter Cropped Puffer Jacket Coat Short Warm Quilted Jacket 2025.jpg" alt="Winter Cropped Puffer Jacket Coat Short Warm Quilted Jacket">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Women’s Winter Cropped Puffer Short Warm Quilted Jacket</span>
+                        <span class="product-price">$50.98</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/Amazon Essentials womens Lightweight Water-Resistant Packable Hooded Puffer Coat.jpg" alt="womens Lightweight Water-Resistant Packable Hooded Puffer Coat">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Women’s Lightweight Water-Resistant Packable Hooded Puffer Coat</span>
+                        <span class="product-price">$45.80</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/Dokotoo Women's Winter Casual Quilted Jackets Long Sleeve Button Down Puffer Jacket Padded Outerwear Coats.jpg" alt="Women's Winter Casual Quilted Jackets Long Sleeve Button Down">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Women's Casual Long Sleeve Button Down Puffer Outerwear Coats</span>
+                        <span class="product-price">$47.88</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/Amazon Essentials Men's Packable Lightweight Water-Resistant Puffer Jacket.jpg" alt="Men's Packable Lightweight Water-Resistant Puffer Jacket">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Men's Packable Lightweight Water-Resistant Puffer Jacket</span>
+                        <span class="product-price">$38.60</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/Men's Quarter Zip Pullover Quilted Sweatshirt Waffle Mock Neck Casual Long Sleeve Polo Sweater.jpg" alt="Sweatshirt Waffle Mock Neck Casual Long Sleeve Polo Sweater">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Men's Zip Pullover Waffle Neck Long Sleeve Polo Sweater</span>
+                        <span class="product-price">$29.99</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/Carhartt Men's 104050 J130 Washed Duck Active Jac.jpg" alt="Men's 104050 J130 Washed Duck">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Men's Washed Duck Active Warm Winter Season Jacket</span>
+                        <span class="product-price">$119.99</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/LILLUSORY Womens Oversized Chunky Sweaters 2025 Mock Turtleneck Long Pullover Tops Fall Winter Casual Knit Fashion Clothing.jpg" alt="Wool women clothing">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Women's Oversized Turtleneck Long Pullover Tops</span>
+                        <span class="product-price">$29.99</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/Wander Agio Womens Warm Winter Infinity Scarves Set Blanket Scarf Pure Color.jpg" alt="Womens Warm Winter Infinity Scarves Set">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Women's Warm Winter Infinity Pure Colour Scarves</span>
+                        <span class="product-price">$13.59</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/Zaclotre Girls Sweatsuit 2 Piece Outfits Fall Winter Fleece Half Zip Thumb Hole Sweatshirts and Sweatpants Joggers Set.jpg" alt="Half zip sweatshirt">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Girl's Fleece Half Zip Thumb Hole Sweatshirt and pants Set</span>
+                        <span class="product-price">$33.99</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/Chanyarn Women's Pure Cashmere Sweater Turtleneck Long Sleeve Warm Soft 2025 Fall Winter Knit Pullover.jpg" alt="Knit Pullover">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Women's Long Sleeve Warm Knit Turtleneck Pullover</span>
+                        <span class="product-price">$99.99</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/ALEADER Womens Winter Snow Boots Waterproof Shell Duck Boots.jpg" alt="Winter snow Boots">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Womens Winter Snow Boots Waterproof Shell Duck Boots</span>
+                        <span class="product-price">$55.99</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/SHIBEVER Winter Boots for Women Waterproof Womens Snow Boots Warm - Ankle Fur Lined Booties - Insulated Winter Shoes.jpg" alt="Insulated water shoes">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Waterproof Ankle Fur Lined Winter Boots for Women</span>
+                        <span class="product-price">$35.99</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/Winter Hat Scarf Gloves and Ear Warmer, Warm Knit Beanie Hat Touch Screen Gloves Set Winter Gifts Neck Scarves for Women.jpg" alt="Neck Scarves for Women">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Winter Set (Hat, Scarf, Gloves and Ear Warmer) for Women</span>
+                        <span class="product-price">$25.99</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/GADIEMKENSD Women's Winter Reflective Fleece Ponytail Hat with Drop Down Ear Warmer.jpg" alt="Reflective Fleece Ponytail Hat">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Women's Winter Reflective Fleece Ponytail Hat with Drop Down Ear Warmer</span>
+                        <span class="product-price">$19.99</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/PLEPAN Quarter Zip Pullover Mens Casual Fleece Sweatshirt Long Sleeve Mock Neck Sweater Polo with Pocket.jpg" alt="Men's Polo Sweater">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Zip Pullover Men's Casual Long Sleeve Mock Neck Sweater</span>
+                        <span class="product-price">$30.99</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/Amazon Essentials Men's V-Neck Pullover Sweater.jpg" alt="Men's V-Neck Pullover Sweater">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Men's V-Neck Pullover Warm Winter Season Sweater</span>
+                        <span class="product-price">$15.83</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/Girl's Long Coat Waterproof Winter Kids Outerwear Warm Parka Puffer Jacket with Hood.jpg" alt="Kid's Outerwear with Hood">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Girl's Long Waterproof Winter Kid's Outerwear with Hood</span>
+                        <span class="product-price">$64.99</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/Kids Boy's Winter Coat Fleece Lined Waterproof Jacket Puffy Cotton Coat Thick Hooded Down Outdoor Coats.jpg" alt="Waterproof Puffy Cotton Outdoor Coats">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Boy's Fleece Lined Waterproof Puffy Cotton Outdoor Coats</span>
+                        <span class="product-price">$53.99</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/UGREVZ Girls Boys Snow Pants 2-9 Years old Thick Winter Warm Pants Girl Activewear Clothes.jpg" alt="Girl's Boy's (2-9 Years old) Winter Warm Pants">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Girl's Boy's (2-9 Years old) Winter Warm Activewear</span>
+                        <span class="product-price">$19.99</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/Yeokou Mens Winter Warm Sherpa Lined Active Thermal Jogger Fleece Sweatpants Pant.jpg" alt="Wide-leg trousers A20">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Men's Active Thermal Jogger Fleece Sweatpants</span>
+                        <span class="product-price">$28.39</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/Men's Thermal Winter Snow Wide Toe Box Insulated Slip-Resistant Outsole Boots.jpg" alt="Men's Wide Toe Insulated Slip-Resistant Outsole Boots">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Men's Wide Toe Insulated Slip-Resistant Outsole Boots</span>
+                        <span class="product-price">$59.99</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/RIONA Men's 100 Australian Merino Wool Scarf Knitted Soft Warm Neckwear.jpg" alt="Men's Wool Knitted Soft Warm Neckwear">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Men's Merino Wool Knitted Soft Warm Neckwear</span>
+                        <span class="product-price">$34.99</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/Wander Agio Women's Fashion Long Shawl Big Grid Winter Warm Lattice Large Scarf.jpg" alt="Women's Fashion Long Winter Warm Lattice Large Scarf">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Women's Fashion Long Winter Warm Lattice Large Scarf</span>
+                        <span class="product-price">$19.99</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <div class="product-image-wrapper">
+                        <img src="winter-arrivals/Merino Wool Winter Soft and Cozy Scarf for Men.jpg" alt="Merino Wool Winter Soft and Cozy Scarf for Men">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Merino Wool Winter Soft and Cozy Scarf for Men</span>
+                        <span class="product-price">$17.79</span>
+                    </div>
+                </a>
+                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+            </div>
+            
+            <div class="new-in-pagination">
+                <a href="#" class="page-link disabled"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+            </div>
+
+        </section>
+    </div>
+</main>
+
+    <footer class="main-footer">
+    <div class="footer-columns container">
+        <div class="footer-col customer-service-footer">
+            <ul class="customer-service-list">
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Order Status</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Return Policy & Exchanges</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<button class="chat-button" id="openChatButton" style="right: 70px;"><i class="fas fa-comment-dots"></i></button>
+    <script src="script.js"></script>
+
+<div id="loginModal" class="modal-overlay hidden">
+    <div class="modal-content">
+        <button class="close-modal-btn">&times;</button>
+        <h3>Login to C.vault</h3>
+        <form class="auth-form">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <div class="auth-actions">
+                <a href="#" class="forgot-password">Forgot password?</a>
+                <button type="submit" class="auth-submit-btn black-btn" data-action="login-submit">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="registerModal" class="modal-overlay hidden">
+    <div class="modal-content">
+        <button class="close-modal-btn">&times;</button>
+        <h3>Create an Account</h3>
+        <form class="auth-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="auth-submit-btn black-btn" data-action="register-submit">Register</button>
+        </form>
+    </div>
+</div>
+
+<div id="cartSidebar" class="sidebar-overlay hidden">
+    <div class="sidebar-content">
+        <div class="sidebar-header">
+            <h2>Shopping Bag</h2>
+            <button class="close-sidebar-btn" id="closeCartButton">&times;</button>
+        </div>
+
+        <div class="cart-items-wrapper">
+            <div id="emptyCartMessage" class="empty-cart-message">
+                <p>Your bag is empty.</p>
+            </div>
+
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="cart-summary">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <button class="checkout-btn black-btn" id="buyNowButton" disabled>Add Something to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div id="chatBox" class="chat-window hidden">
+    <div class="chat-header">
+        <div class="contact-info">
+            <i class="fas fa-headset chat-agent-icon"></i>
+            <span class="agent-name">Customer Support</span>
+            <span class="status-dot online"></span>
+        </div>
+        <button class="close-chat-btn" id="closeChatButton">&times;</button>
+    </div>
+    
+    <div class="chat-messages" id="chatMessages">
+        <div class="message received">
+            <p>Welcome! How can I help you find the perfect item today?</p>
+            <div class="timestamp">11:00 AM</div>
+        </div>
+        </div>
+    
+    <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Type your message...">
+        <button id="sendChatButton">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+
+</body>
+</html>
